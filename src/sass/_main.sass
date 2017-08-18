@@ -1,0 +1,88 @@
+// Normally mainpage styles
+// ingridients
+.Ingridients
+	padding: 60px 0
+	&__wrapper
+		position: relative
+		width: 275px!important
+		+r(480)
+			margin: auto
+	&__item
+		box-shadow: 0 -21px 24px rgba(44, 21, 3, 0.04)
+		border-radius: 5px
+		background-color: #ffffff
+		background-image: linear-gradient(180deg, #ffffff 0%, rgba(255, 255, 255, 0) 100%)
+		opacity: 0.85
+		padding: 0 32px 23px 32px
+		color: #4a3912
+		width: 275px
+		padding-top: 125px
+	&__pic
+		left: 0
+		right: 0
+		margin: auto
+		position: absolute
+		top: -85px
+		z-index: 11
+	&__content
+		font: 400 14px/1 'Roboto', sans-serif, Arial
+		text-align: center
+		.title,
+		.desc
+			text-align: center
+			margin-bottom: 3px
+		.title
+			font-size: 24px
+			font-weight: 500
+			+r(480)
+				font-size: 18px
+		.desc
+			margin-bottom: 15px
+	&__ico
+		opacity: 0
+		visibility: hidden
+		+tr(all .3s ease)
+.Ingridients__pic-arnika
+	left: 34px
+	top: -120px
+.Ingridients__pic-iglica
+	top: -140px
+.Ingridients__pic-kashtan
+	top: -140px
+.Ingridients__pic-centela
+	top: -50px
+.Ingridients__pic-cedra
+	top: -50px
+.Ingridients__pic-gold
+	top: -40px
+
+// js-slider 2
+.owl-stage
+	user-select: none
+.js-slider2
+	background: url(/img/in-bg.png)center no-repeat
+	.owl-stage
+		padding-top: 212px
+		padding-bottom: 50px
+	.owl-item
+		outline: 0
+		+scale(0.67)
+		opacity: 0.5
+		filter: blur(4px)
+		+tr(all .3s ease)
+		z-index: 1
+		&.siblings
+			+scale(0.8)
+			opacity: 0.7
+			filter: blur(2.5px)
+		&.center
+			+scale(1)
+			opacity: 1
+			z-index: 11
+			filter: none
+			.Ingridients__ico
+				opacity: 1
+				visibility: visible
+		img
+			margin: auto
+			width: 	auto

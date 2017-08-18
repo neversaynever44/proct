@@ -1,0 +1,254 @@
+$icons: (0:0)
+$icons: map-merge($icons,(akmela1: (X: 0px, Y:-97px, W: 74px, H: 91px, TW: 540px, TH: 464px, IMG: '../img/icons.png')))
+$icons: map-merge($icons,(akmela2: (X: -428px, Y:-218px, W: 67px, H: 55px, TW: 540px, TH: 464px, IMG: '../img/icons.png')))
+$icons: map-merge($icons,(akmela3: (X: -175px, Y:-97px, W: 39px, H: 64px, TW: 540px, TH: 464px, IMG: '../img/icons.png')))
+$icons: map-merge($icons,(arnika1: (X: -428px, Y:0px, W: 77px, H: 61px, TW: 540px, TH: 464px, IMG: '../img/icons.png')))
+$icons: map-merge($icons,(arnika2: (X: -77px, Y:-270px, W: 89px, H: 58px, TW: 540px, TH: 464px, IMG: '../img/icons.png')))
+$icons: map-merge($icons,(arnika3: (X: -218px, Y:-98px, W: 63px, H: 76px, TW: 540px, TH: 464px, IMG: '../img/icons.png')))
+$icons: map-merge($icons,(arnika4: (X: -293px, Y:-82px, W: 73px, H: 78px, TW: 540px, TH: 464px, IMG: '../img/icons.png')))
+$icons: map-merge($icons,(cedra1: (X: -428px, Y:-277px, W: 63px, H: 56px, TW: 540px, TH: 464px, IMG: '../img/icons.png')))
+$icons: map-merge($icons,(cedra2: (X: -509px, Y:0px, W: 31px, H: 86px, TW: 540px, TH: 464px, IMG: '../img/icons.png')))
+$icons: map-merge($icons,(cedra3: (X: 0px, Y:-347px, W: 94px, H: 51px, TW: 540px, TH: 464px, IMG: '../img/icons.png')))
+$icons: map-merge($icons,(centela1: (X: 0px, Y:-270px, W: 73px, H: 73px, TW: 540px, TH: 464px, IMG: '../img/icons.png')))
+$icons: map-merge($icons,(centela2: (X: -376px, Y:-117px, W: 47px, H: 61px, TW: 540px, TH: 464px, IMG: '../img/icons.png')))
+$icons: map-merge($icons,(centela3: (X: 0px, Y:0px, W: 103px, H: 93px, TW: 540px, TH: 464px, IMG: '../img/icons.png')))
+$icons: map-merge($icons,(gama1: (X: -293px, Y:0px, W: 79px, H: 78px, TW: 540px, TH: 464px, IMG: '../img/icons.png')))
+$icons: map-merge($icons,(gama2: (X: -376px, Y:-182px, W: 42px, H: 66px, TW: 540px, TH: 464px, IMG: '../img/icons.png')))
+$icons: map-merge($icons,(gama3: (X: -57px, Y:-402px, W: 50px, H: 56px, TW: 540px, TH: 464px, IMG: '../img/icons.png')))
+$icons: map-merge($icons,(gama4: (X: 0px, Y:-402px, W: 53px, H: 62px, TW: 540px, TH: 464px, IMG: '../img/icons.png')))
+$icons: map-merge($icons,(gold1: (X: -78px, Y:-97px, W: 93px, H: 70px, TW: 540px, TH: 464px, IMG: '../img/icons.png')))
+$icons: map-merge($icons,(gold2: (X: -177px, Y:-192px, W: 90px, H: 59px, TW: 540px, TH: 464px, IMG: '../img/icons.png')))
+$icons: map-merge($icons,(gold3: (X: -170px, Y:-270px, W: 112px, H: 45px, TW: 540px, TH: 464px, IMG: '../img/icons.png')))
+$icons: map-merge($icons,(iglica1: (X: -107px, Y:0px, W: 107px, H: 79px, TW: 540px, TH: 464px, IMG: '../img/icons.png')))
+$icons: map-merge($icons,(iglica2: (X: -218px, Y:0px, W: 71px, H: 94px, TW: 540px, TH: 464px, IMG: '../img/icons.png')))
+$icons: map-merge($icons,(iglica3: (X: -376px, Y:0px, W: 48px, H: 113px, TW: 540px, TH: 464px, IMG: '../img/icons.png')))
+$icons: map-merge($icons,(kashtan1: (X: -92px, Y:-192px, W: 81px, H: 72px, TW: 540px, TH: 464px, IMG: '../img/icons.png')))
+$icons: map-merge($icons,(kashtan2: (X: -428px, Y:-65px, W: 65px, H: 71px, TW: 540px, TH: 464px, IMG: '../img/icons.png')))
+$icons: map-merge($icons,(kashtan3: (X: -428px, Y:-337px, W: 59px, H: 50px, TW: 540px, TH: 464px, IMG: '../img/icons.png')))
+$icons: map-merge($icons,(kashtan4: (X: -98px, Y:-347px, W: 54px, H: 51px, TW: 540px, TH: 464px, IMG: '../img/icons.png')))
+$icons: map-merge($icons,(mentol1: (X: -293px, Y:-164px, W: 64px, H: 84px, TW: 540px, TH: 464px, IMG: '../img/icons.png')))
+$icons: map-merge($icons,(mentol2: (X: -286px, Y:-270px, W: 42px, H: 42px, TW: 540px, TH: 464px, IMG: '../img/icons.png')))
+$icons: map-merge($icons,(mentol3: (X: 0px, Y:-192px, W: 88px, H: 74px, TW: 540px, TH: 464px, IMG: '../img/icons.png')))
+$icons: map-merge($icons,(mentol4: (X: -428px, Y:-140px, W: 62px, H: 74px, TW: 540px, TH: 464px, IMG: '../img/icons.png')))
+
+
+// Gets an attribute from the sass map
+@function icon-attr($icon, $attr)
+	$icon: map-get($icons, $icon)
+	@return map-get($icon, $attr)
+
+@mixin sprite($iconName)
+	background-image: url(icon-attr($iconName, IMG))
+	width: icon-attr($iconName, W)
+	height: icon-attr($iconName, H)
+	background-position: icon-attr($iconName, X) icon-attr($iconName, Y)
+@mixin sprite-position($iconName)
+	background-position: icon-attr($iconName, X) icon-attr($iconName, Y)
+@mixin sprite-retina($iconName)
+	background-image: url(icon-attr($iconName, IMG))
+	$width: icon-attr($iconName, W)
+	$height: icon-attr($iconName, H)
+	width: $width/2
+	height: $height/2
+	$x: icon-attr($iconName, X)
+	$y: icon-attr($iconName, Y)
+	background-position: $x/2 $y/2
+	$tw: icon-attr($iconName, TW) 	
+	$th: icon-attr($iconName, TH)
+	background-size: $tw/2 $th/2  	
+
+
+@mixin s($i)
+	+sprite($i)
+@mixin sp($i)
+	+sprite-position($i)
+@mixin sr($i)
+	+sprite-retina($i)	
+
+//
+//.icon-akmela1
+//	width: 74px
+//	height: 91px
+//	background-image: url('../img/icons.png')
+//	background-position: 0px -97px
+//
+//.icon-akmela2
+//	width: 67px
+//	height: 55px
+//	background-image: url('../img/icons.png')
+//	background-position: -428px -218px
+//
+//.icon-akmela3
+//	width: 39px
+//	height: 64px
+//	background-image: url('../img/icons.png')
+//	background-position: -175px -97px
+//
+//.icon-arnika1
+//	width: 77px
+//	height: 61px
+//	background-image: url('../img/icons.png')
+//	background-position: -428px 0px
+//
+//.icon-arnika2
+//	width: 89px
+//	height: 58px
+//	background-image: url('../img/icons.png')
+//	background-position: -77px -270px
+//
+//.icon-arnika3
+//	width: 63px
+//	height: 76px
+//	background-image: url('../img/icons.png')
+//	background-position: -218px -98px
+//
+//.icon-arnika4
+//	width: 73px
+//	height: 78px
+//	background-image: url('../img/icons.png')
+//	background-position: -293px -82px
+//
+//.icon-cedra1
+//	width: 63px
+//	height: 56px
+//	background-image: url('../img/icons.png')
+//	background-position: -428px -277px
+//
+//.icon-cedra2
+//	width: 31px
+//	height: 86px
+//	background-image: url('../img/icons.png')
+//	background-position: -509px 0px
+//
+//.icon-cedra3
+//	width: 94px
+//	height: 51px
+//	background-image: url('../img/icons.png')
+//	background-position: 0px -347px
+//
+//.icon-centela1
+//	width: 73px
+//	height: 73px
+//	background-image: url('../img/icons.png')
+//	background-position: 0px -270px
+//
+//.icon-centela2
+//	width: 47px
+//	height: 61px
+//	background-image: url('../img/icons.png')
+//	background-position: -376px -117px
+//
+//.icon-centela3
+//	width: 103px
+//	height: 93px
+//	background-image: url('../img/icons.png')
+//	background-position: 0px 0px
+//
+//.icon-gama1
+//	width: 79px
+//	height: 78px
+//	background-image: url('../img/icons.png')
+//	background-position: -293px 0px
+//
+//.icon-gama2
+//	width: 42px
+//	height: 66px
+//	background-image: url('../img/icons.png')
+//	background-position: -376px -182px
+//
+//.icon-gama3
+//	width: 50px
+//	height: 56px
+//	background-image: url('../img/icons.png')
+//	background-position: -57px -402px
+//
+//.icon-gama4
+//	width: 53px
+//	height: 62px
+//	background-image: url('../img/icons.png')
+//	background-position: 0px -402px
+//
+//.icon-gold1
+//	width: 93px
+//	height: 70px
+//	background-image: url('../img/icons.png')
+//	background-position: -78px -97px
+//
+//.icon-gold2
+//	width: 90px
+//	height: 59px
+//	background-image: url('../img/icons.png')
+//	background-position: -177px -192px
+//
+//.icon-gold3
+//	width: 112px
+//	height: 45px
+//	background-image: url('../img/icons.png')
+//	background-position: -170px -270px
+//
+//.icon-iglica1
+//	width: 107px
+//	height: 79px
+//	background-image: url('../img/icons.png')
+//	background-position: -107px 0px
+//
+//.icon-iglica2
+//	width: 71px
+//	height: 94px
+//	background-image: url('../img/icons.png')
+//	background-position: -218px 0px
+//
+//.icon-iglica3
+//	width: 48px
+//	height: 113px
+//	background-image: url('../img/icons.png')
+//	background-position: -376px 0px
+//
+//.icon-kashtan1
+//	width: 81px
+//	height: 72px
+//	background-image: url('../img/icons.png')
+//	background-position: -92px -192px
+//
+//.icon-kashtan2
+//	width: 65px
+//	height: 71px
+//	background-image: url('../img/icons.png')
+//	background-position: -428px -65px
+//
+//.icon-kashtan3
+//	width: 59px
+//	height: 50px
+//	background-image: url('../img/icons.png')
+//	background-position: -428px -337px
+//
+//.icon-kashtan4
+//	width: 54px
+//	height: 51px
+//	background-image: url('../img/icons.png')
+//	background-position: -98px -347px
+//
+//.icon-mentol1
+//	width: 64px
+//	height: 84px
+//	background-image: url('../img/icons.png')
+//	background-position: -293px -164px
+//
+//.icon-mentol2
+//	width: 42px
+//	height: 42px
+//	background-image: url('../img/icons.png')
+//	background-position: -286px -270px
+//
+//.icon-mentol3
+//	width: 88px
+//	height: 74px
+//	background-image: url('../img/icons.png')
+//	background-position: 0px -192px
+//
+//.icon-mentol4
+//	width: 62px
+//	height: 74px
+//	background-image: url('../img/icons.png')
+//	background-position: -428px -140px
+//

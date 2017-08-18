@@ -1,0 +1,192 @@
+// # SHORT HOWTO
+// ## Sprites
+//     .whatever
+// 			+s(codedby) 
+// ## gradient example
+//     	+g(#232323, #5c5c5c);
+//	   horizontal
+//     	+gh(#232323, #5c5c5c);
+// ## making bw-images
+//     img
+//			@extend %gray
+// ## predefined media-queries: https://github.com/paranoida/sass-mediaqueries
+//     +r(320)
+//			display: none
+// +max-screen(1000), +iphone5, +iphone4, +ipad-retina, +ipad, +hdpi - also available
+//
+// ## use cycles
+//     @for $i from 1 through 3
+//       .item-#{$i}
+//			width: 2em * $i;
+//     @each $s in a,b,c
+// 	    	#{$s}
+//				display: none
+// ## fonts
+// Save fonts to /src/fonts
+// +font(book, cytiapro-black-webfont)
+// and create mixin
+// =book
+// 	font-family: "book", Arial, sans-serif
+
+body
+	font-family: 'Roboto', Arial, sans-serif
+	font-size: 14px
+	line-height: 1.2
+	
+// common blocks
+%inner
+	width: 100%
+	max-width: 1110px
+	margin: 0 auto
+	position: relative
+	height: 100%
+	+clr
+
+.inner
+	@extend %inner
+
+html, 
+body,
+.out
+	height: 100%
+.subtitle
+	color: #4a3912
+	font-size: 24px
+	text-align: center
+	+r(480)
+		font-size: 16px
+
+
+// ingridients mobile arrows
+.js-slider2
+	.customNav
+		position: absolute
+		max-width: 270px
+		margin: auto
+		top: 56%
+		left: 0
+		right: 0
+		i
+			font-size: 26px
+			color: #cccdcc
+			+tr(color .3s ease)
+			&:hover
+				color: #4caa4e
+.js-prev,
+.js-next
+	position: absolute
+	cursor: pointer
+	display: none
+	+hide-text
+	+r(480)
+		display: block
+.owl-prev,
+.owl-next
+	+hide-text
+.js-prev
+	left: 7px
+.js-next
+	right: 7px
+
+
+// ingridient icons
+@each $s in iglica1, iglica2, iglica3, arnika1, arnika2, arnika3, arnika4, mentol1, mentol2, mentol3, mentol4, gama1, gama2, gama3, gama4, akmela1, akmela2, akmela3, kashtan1, kashtan2, kashtan3, kashtan4, centela1, centela2, centela3, cedra1,cedra2,cedra3,gold1,gold2,gold3
+	.ico__#{$s}
+		+s(#{$s})
+
+.ico
+	position: absolute
+	// z-index: 11
+	&__iglica1
+		top: -160px
+		left: -17px
+	&__iglica2
+		top: -220px
+		right: -18px
+	&__iglica3
+		top: -92px
+		right: 0
+	&__arnika1
+		top: -72px
+		left: -35px
+	&__arnika2
+		top: -200px
+		left: 50px
+	&__arnika3
+		top: -160px
+		right: 70px
+	&__arnika4
+		top: -55px
+		right: -31px
+	&__mentol1
+		top: -100px
+		left: 0	
+	&__mentol2
+		top: -180px
+		left: 80px
+	&__mentol3
+		top: -150px
+		right: 40px
+	&__mentol4
+		top: -52px
+		right: -22px
+	&__gama1
+		top: -100px
+		left: 0	
+	&__gama2
+		top: -200px
+		left: 120px
+	&__gama3
+		top: -130px
+		right: 40px
+	&__gama4
+		top: -52px
+		right: -22px
+	&__akmela1
+		top: -88px
+		left: 30px
+	&__akmela2
+		top: -130px
+		left: 80px
+	&__akmela3
+		top: -200px
+		right: 40px
+	&__kashtan1
+		top: -61px
+		left: -16px
+	&__kashtan2
+		top: -200px
+		left: 30px
+	&__kashtan3
+		top: -130px
+		left: 80px
+	&__kashtan4
+		top: -152px
+		right: -0
+	&__centela1
+		top: -101px
+		left: -16px
+	&__centela2
+		top: -200px
+		left: 70px
+	&__centela3
+		top: -130px
+		right: 0	
+	&__cedra1
+		top: -101px
+		left: -16px
+	&__cedra2
+		top: -200px
+		left: 70px
+	&__cedra3
+		top: -85px
+		right: 0	
+	&__gold1
+		top: -101px
+		left: -16px
+	&__gold2
+		top: -200px
+		left: 70px
+	&__gold3
+		top: -85px
+		right: 0	
