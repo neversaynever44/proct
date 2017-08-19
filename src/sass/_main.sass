@@ -86,3 +86,93 @@
 		img
 			margin: auto
 			width: 	auto
+
+// reviews 
+.reviews
+	padding: 50px 0 60px 0
+	background: #f4f7fc url(/img/carousel-bg.png)center no-repeat
+	.inner
+		max-width: 900px
+	&__title
+		text-align: center
+		margin-bottom: 	54px
+		font: 400 20px/1 'Roboto', Arial, sans-serif
+		+r(767)
+			padding: 0 20px
+		strong
+			display: 	block
+			color: #47360e
+			font-size: 42px
+			font-weight: 700
+			margin-bottom: 	18px
+			text-transform: uppercase
+			+r(767)
+				font-size: 22px
+			+r(480)
+				font-size: 18px	
+		p
+			color: #4a3912
+			line-height: 1.2
+			max-width: 440px
+			margin: auto
+			+r(480)
+				font-size: 16px
+	&__pic
+		position: relative
+		top: 70px
+		margin: auto
+		height: 400px
+		+r(767)
+			width: 	200px
+			height: 300px
+		+r(480)
+			width: 140px
+			height: 200px
+			top: 	40px
+			left: -60%
+		+r(360)
+			width: 119px
+			height: 175px
+	&__content
+		padding: 20px 40px
+		color: #373230
+		font: 400 14px/1.1 "Myriad Pro", sans-serif, Arial
+		position: relative
+		min-width: 444px
+		transform: translateX(-25%)
+		text-align: center
+		+r(767)
+			min-width: 280px
+			transform: translateX(-15%)
+			padding: 15px
+		+r(480)
+			transform: translateX(-40%)
+			padding: 	8px
+		&:after
+			content: ""
+			display: block
+			position: absolute
+			z-index: -1
+			top: 0
+			left: 0
+			width: 100%
+			height: 100%
+			box-shadow: 0 -21px 24px rgba(44, 21, 3, 0.04)
+			border-radius: 5px
+			background-color: #ffffff
+			background-image: linear-gradient(180deg, #ffffff 0%, rgba(255, 255, 255, 0) 100%)
+			opacity: 0.85
+		h3
+			margin-bottom: 10px
+		h3,
+		p
+			color: #4a3912
+			font: 400 14px/1.2 'Roboto', sans-serif, Arial
+		h3
+			font-size: 22px
+			+r(480)
+				font-size: 16px
+	&__content
+		opacity: 0
+		visibility: hidden
+		transition: opacity, visibility .1s ease

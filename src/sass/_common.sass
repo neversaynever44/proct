@@ -57,6 +57,86 @@ body,
 		font-size: 16px
 
 
+
+// slider option
+.js-slider1
+	.owl-item
+		outline: 0
+		+scale(0.47)
+		opacity: 0.4
+		filter: saturate(30%)
+		+tr(all .3s ease)
+		z-index: 1
+		+r(767)
+			+scale(0.4)
+		+r(480)
+			+scale(0.5)
+		&.siblings
+			+scale(0.66)
+			opacity: 0.5
+		&.center
+			+scale(1)
+			z-index: 11
+			opacity: 1
+			filter: none
+			.reviews__content
+				visibility: visible
+				opacity: 1
+		img
+			width: auto
+			margin: auto
+			height: 100%
+			display: block
+			+vcenter
+			+r(767)
+				width: 100%
+			+r(480)
+				width: 	90%
+
+// slider animation
+.animation
+	+tr(all .3s ease-in)
+	.reviews__content
+		animation: fade 0.3s ease-in 0.4s both
+	.reviews__content h3
+		animation: fromRight1 0.3s ease-in 0.4s both
+	.reviews__content p
+		animation: fromRight2 0.3s ease-in 0.4s both
+
+// keyframes reviews slider
+@keyframes fromRight1
+	0% 
+		transform: translateX(15px)
+		opacity: 0
+	70%
+		transform: translateX(3px)
+		opacity: 0.66
+	100% 
+		transform: translateX(0)
+		opacity: 1 
+
+@keyframes fromRight2
+	0% 
+		transform: translateX(15px)
+		opacity: 0
+	70%
+		transform: translateX(3px)
+		opacity: 0.66
+	100% 
+		transform: translateX(0)
+		opacity: 1 
+
+@keyframes fade
+	0% 
+		opacity: 0
+	70%
+		opacity: 0.66
+	100% 
+		opacity: 1 
+
+
+
+
 // ingridients mobile arrows
 .js-slider2
 	.customNav

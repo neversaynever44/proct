@@ -144,6 +144,36 @@ html, body, .out { height: 100%; }
 
 .subtitle { color: #4a3912; font-size: 24px; text-align: center; }
 
+.js-slider1 .owl-item { outline: 0; -webkit-transform: scale(0.47); -ms-transform: scale(0.47); transform: scale(0.47); opacity: 0.4; -webkit-filter: saturate(30%); filter: saturate(30%); -webkit-transition: all 0.3s ease; transition: all 0.3s ease; z-index: 1; }
+.js-slider1 .owl-item.siblings { -webkit-transform: scale(0.66); -ms-transform: scale(0.66); transform: scale(0.66); opacity: 0.5; }
+.js-slider1 .owl-item.center { -webkit-transform: scale(1); -ms-transform: scale(1); transform: scale(1); z-index: 11; opacity: 1; -webkit-filter: none; filter: none; }
+.js-slider1 .owl-item.center .reviews__content { visibility: visible; opacity: 1; }
+.js-slider1 .owl-item img { width: auto; margin: auto; height: 100%; display: block; position: absolute; top: 50%; left: 50%; -webkit-transform: translate(-50%, -50%); -ms-transform: translate(-50%, -50%); transform: translate(-50%, -50%); }
+
+.animation { -webkit-transition: all 0.3s ease-in; transition: all 0.3s ease-in; }
+.animation .reviews__content { -webkit-animation: fade 0.3s ease-in 0.4s both; animation: fade 0.3s ease-in 0.4s both; }
+.animation .reviews__content h3 { -webkit-animation: fromRight1 0.3s ease-in 0.4s both; animation: fromRight1 0.3s ease-in 0.4s both; }
+.animation .reviews__content p { -webkit-animation: fromRight2 0.3s ease-in 0.4s both; animation: fromRight2 0.3s ease-in 0.4s both; }
+
+@-webkit-keyframes fromRight1 { 0% { -webkit-transform: translateX(15px); transform: translateX(15px); opacity: 0; }
+  70% { -webkit-transform: translateX(3px); transform: translateX(3px); opacity: 0.66; }
+  100% { -webkit-transform: translateX(0); transform: translateX(0); opacity: 1; } }
+
+@keyframes fromRight1 { 0% { -webkit-transform: translateX(15px); transform: translateX(15px); opacity: 0; }
+  70% { -webkit-transform: translateX(3px); transform: translateX(3px); opacity: 0.66; }
+  100% { -webkit-transform: translateX(0); transform: translateX(0); opacity: 1; } }
+@-webkit-keyframes fromRight2 { 0% { -webkit-transform: translateX(15px); transform: translateX(15px); opacity: 0; }
+  70% { -webkit-transform: translateX(3px); transform: translateX(3px); opacity: 0.66; }
+  100% { -webkit-transform: translateX(0); transform: translateX(0); opacity: 1; } }
+@keyframes fromRight2 { 0% { -webkit-transform: translateX(15px); transform: translateX(15px); opacity: 0; }
+  70% { -webkit-transform: translateX(3px); transform: translateX(3px); opacity: 0.66; }
+  100% { -webkit-transform: translateX(0); transform: translateX(0); opacity: 1; } }
+@-webkit-keyframes fade { 0% { opacity: 0; }
+  70% { opacity: 0.66; }
+  100% { opacity: 1; } }
+@keyframes fade { 0% { opacity: 0; }
+  70% { opacity: 0.66; }
+  100% { opacity: 1; } }
 .js-slider2 .customNav { position: absolute; max-width: 270px; margin: auto; top: 56%; left: 0; right: 0; }
 .js-slider2 .customNav i { font-size: 26px; color: #cccdcc; -webkit-transition: color 0.3s ease; transition: color 0.3s ease; }
 .js-slider2 .customNav i:hover { color: #4caa4e; }
@@ -282,13 +312,42 @@ html, body, .out { height: 100%; }
 .js-slider2 .owl-item.center { -webkit-transform: scale(1); -ms-transform: scale(1); transform: scale(1); opacity: 1; z-index: 11; -webkit-filter: none; filter: none; }
 .js-slider2 .owl-item.center .Ingridients__ico { opacity: 1; visibility: visible; }
 .js-slider2 .owl-item img { margin: auto; width: auto; }
+
+.reviews { padding: 50px 0 60px 0; background: #f4f7fc url(/img/carousel-bg.png) center no-repeat; }
+.reviews .inner { max-width: 900px; }
+.reviews__title { text-align: center; margin-bottom: 54px; font: 400 20px/1 "Roboto", Arial, sans-serif; }
+.reviews__title strong { display: block; color: #47360e; font-size: 42px; font-weight: 700; margin-bottom: 18px; text-transform: uppercase; }
+.reviews__title p { color: #4a3912; line-height: 1.2; max-width: 440px; margin: auto; }
+.reviews__pic { position: relative; top: 70px; margin: auto; height: 400px; }
+.reviews__content { padding: 20px 40px; color: #373230; font: 400 14px/1.1 "Myriad Pro", sans-serif, Arial; position: relative; min-width: 444px; -webkit-transform: translateX(-25%); -ms-transform: translateX(-25%); transform: translateX(-25%); text-align: center; }
+.reviews__content:after { content: ""; display: block; position: absolute; z-index: -1; top: 0; left: 0; width: 100%; height: 100%; -webkit-box-shadow: 0 -21px 24px rgba(44, 21, 3, 0.04); box-shadow: 0 -21px 24px rgba(44, 21, 3, 0.04); border-radius: 5px; background-color: #ffffff; background-image: -webkit-linear-gradient(270deg, #ffffff 0%, rgba(255, 255, 255, 0) 100%); background-image: linear-gradient(180deg, #ffffff 0%, rgba(255, 255, 255, 0) 100%); opacity: 0.85; }
+.reviews__content h3 { margin-bottom: 10px; }
+.reviews__content h3, .reviews__content p { color: #4a3912; font: 400 14px/1.2 "Roboto", sans-serif, Arial; }
+.reviews__content h3 { font-size: 22px; }
+.reviews__content { opacity: 0; visibility: hidden; -webkit-transition: opacity, visibility 0.1s ease; transition: opacity, visibility 0.1s ease; }
 @media only screen and (min-device-width: 320px) and (max-device-width: 480px){
  *{ -webkit-text-size-adjust: none; } }
+@media only screen and (max-width: 767px){
+ .js-slider1 .owl-item{ -webkit-transform: scale(0.4); -ms-transform: scale(0.4); transform: scale(0.4); }
+ .js-slider1 .owl-item img{ width: 100%; }
+ .reviews__title{ padding: 0 20px; }
+ .reviews__title strong{ font-size: 22px; }
+ .reviews__pic{ width: 200px; height: 300px; }
+ .reviews__content{ min-width: 280px; -webkit-transform: translateX(-15%); -ms-transform: translateX(-15%); transform: translateX(-15%); padding: 15px; } }
 @media only screen and (max-width: 480px){
  .subtitle{ font-size: 16px; }
+ .js-slider1 .owl-item{ -webkit-transform: scale(0.5); -ms-transform: scale(0.5); transform: scale(0.5); }
+ .js-slider1 .owl-item img{ width: 90%; }
  .js-prev, .js-next{ display: block; }
  .Ingridients__wrapper{ margin: auto; }
- .Ingridients__content .title{ font-size: 18px; } }
+ .Ingridients__content .title{ font-size: 18px; }
+ .reviews__title strong{ font-size: 18px; }
+ .reviews__title p{ font-size: 16px; }
+ .reviews__pic{ width: 140px; height: 200px; top: 40px; left: -60%; }
+ .reviews__content{ -webkit-transform: translateX(-40%); -ms-transform: translateX(-40%); transform: translateX(-40%); padding: 8px; }
+ .reviews__content h3{ font-size: 16px; } }
+@media only screen and (max-width: 360px){
+ .reviews__pic{ width: 119px; height: 175px; } }
 
 
 
