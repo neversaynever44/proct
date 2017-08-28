@@ -60,20 +60,23 @@ body,
 
 // slider option
 .js-slider1
+	// .owl-stage
+		// padding-top: 50px
 	.owl-item
 		outline: 0
-		+scale(0.47)
-		opacity: 0.4
-		filter: saturate(30%)
+		+scale(0.46)
+		filter: saturate(0.2)
 		+tr(all .3s ease)
 		z-index: 1
+		opacity: 0.5
 		+r(767)
 			+scale(0.4)
 		+r(480)
 			+scale(0.5)
 		&.siblings
 			+scale(0.66)
-			opacity: 0.5
+			opacity: 1
+			filter: saturate(0.3)
 		&.center
 			+scale(1)
 			z-index: 11
@@ -88,20 +91,63 @@ body,
 			height: 100%
 			display: block
 			+vcenter
-			+r(767)
-				width: 100%
-			+r(480)
-				width: 	90%
+
+
+.dots
+	// width: 100%
+	margin: auto
+	text-align: center
+	font-size: 0
+	z-index: 111
+	position: absolute
+	outline: 0
+	background: transparent
+	display: inline-block
+	top: 90%
+	left: 50%
+	transform: translateX(-50%)
+	display: none
+	width: 50%
+	+r(480)
+		display: block
+	.item
+		display: inline-block
+		vertical-align: middle
+		width: 12%
+		&:not(:first-child)
+			margin-left: 5%
+		&.active
+			span
+				background: rgba(127,127,127, 1)
+				// background-color: #cccdcc
+				opacity: 1
+		span
+			// border: 3px solid #cccdcc
+			background: rgba(127,127,127, 0.5)
+			border-radius: 20px
+			display: block
+			height: 12px
+			margin: 4px
+			opacity: 0.8
+			width: 12px
+			cursor: pointer
+
 
 // slider animation
 .animation
 	+tr(all .3s ease-in)
 	.reviews__content
 		animation: fade 0.3s ease-in 0.4s both
+		+r(480)
+			animation-delay: 0.1s
 	.reviews__content h3
 		animation: fromRight1 0.3s ease-in 0.4s both
+		+r(480)
+			animation-delay: 0.1s
 	.reviews__content p
 		animation: fromRight2 0.3s ease-in 0.4s both
+		+r(480)
+			animation-delay: 0.1s
 
 // keyframes reviews slider
 @keyframes fromRight1
@@ -136,30 +182,32 @@ body,
 
 
 
+.customNav
+	position: absolute
+	width: 100%
+	margin: auto
+	left: 0
+	right: 0
 
+.js-slider1 
+	.customNav
+		top: 30%
+		max-width: 350px
+		i
+			color: #cccdcc
+			font-size: 30px
 // ingridients mobile arrows
 .js-slider2
 	.customNav
-		position: absolute
 		max-width: 270px
-		margin: auto
 		top: 56%
-		left: 0
-		right: 0
 		i
 			font-size: 26px
 			color: #cccdcc
 			+tr(color .3s ease)
 			&:hover
 				color: #4caa4e
-.js-prev,
-.js-next
-	position: absolute
-	cursor: pointer
-	display: none
-	+hide-text
-	+r(480)
-		display: block
+
 .owl-prev,
 .owl-next
 	+hide-text
@@ -167,6 +215,31 @@ body,
 	left: 7px
 .js-next
 	right: 7px
+
+.js-prev,
+.js-next,
+.js-prev1,
+.js-next1
+	position: absolute
+	cursor: pointer
+	display: none
+	+hide-text
+	+r(480)
+		display: block
+
+.js-prev1,
+.js-next1
+	&:hover
+		opacity: 0.4
+.js-prev1
+	left: 0
+.js-next1
+	right: 0
+
+
+
+
+
 
 
 // ingridient icons
