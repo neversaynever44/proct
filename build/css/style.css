@@ -195,7 +195,7 @@ html, body, .out { height: 100%; }
 
 .js-next { right: 7px; }
 
-.js-prev, .js-next, .js-prev1, .js-next1 { position: absolute; cursor: pointer; display: none; font: 0/0 a; text-shadow: none; color: transparent; }
+.js-prev, .js-next, .js-prev1, .js-next1 { position: absolute; cursor: pointer; display: none; font: 0/0 a; text-shadow: none; color: transparent; -webkit-transition: opacity 0.3s ease; transition: opacity 0.3s ease; }
 
 .js-prev1:hover, .js-next1:hover { opacity: 0.4; }
 
